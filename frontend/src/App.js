@@ -14,6 +14,7 @@ function App() {
       <main className='py-3'>
         <Container>
           <Route exact path='/product/:id' component={ProductScreen} />
+          {/* The question mark after the query string means the id is optional */}
           <Route exact path='/cart/:id?' component={CartScreen} />
           <Route exact path='/' component={HomeScreen} />
         </Container>
