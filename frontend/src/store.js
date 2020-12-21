@@ -13,9 +13,10 @@ const reducer = combineReducers({
   cart: cartReducer,
 });
 
-const createItemsFromStorage = localStorage.getItem(
-  'cartItems' ? JSON.parse(localStorage.getItem('cartItems')) : []
-);
+const createItemsFromStorage = localStorage.getItem('cartItems')
+  ? JSON.parse(localStorage.getItem('cartItems'))
+  : [];
+console.log(createItemsFromStorage);
 
 const initialState = {
   cart: { cartItems: createItemsFromStorage },
